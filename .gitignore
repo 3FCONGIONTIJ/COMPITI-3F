@@ -1,0 +1,18 @@
+# File di sistema Windows
+AppData/
+Local/
+AMD/
+Dx9Cache/
+*.parc
+
+# File di VS Code
+.vscode/
+.extensions/
+
+# File temporanei e cache
+.Ds_Store
+Thumbs.db
+*.tmp
+
+# File Git
+.git
