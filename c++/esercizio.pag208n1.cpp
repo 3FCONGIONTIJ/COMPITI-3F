@@ -1,49 +1,49 @@
 #include <iostream>
-#include <cstring>
+#include <string>
 using namespace std;
 
-float triangolo(float h, float b, char figura[20]) {
+float triangolo(float h, float b, string &figura) {
     float area;
     cout << "Base: ";
     cin >> b;
     cout << "Altezza: ";
     cin >> h;
     area = (b * h) / 2;
-    strcpy(figura, "TRIANGOLO");
+    figura = "TRIANGOLO";
     return area;
 }
 
-float rettangolo(float h, float b, char figura[20]) {
+float rettangolo(float h, float b, string &figura) {
     float area;
     cout << "Base: ";
     cin >> b;
     cout << "Altezza: ";
-   cin >> h;
+    cin >> h;
     area = b * h;
-    strcpy(figura, "RETTANGOLO");
+    figura = "RETTANGOLO";
     return area;
 }
 
-float rombo(float h, float b, char figura[20]) {
+float rombo(float h, float b, string &figura) {
     float area;
     cout << "Diagonale maggiore: ";
     cin >> b;
     cout << "Diagonale minore: ";
     cin >> h;
     area = (b * h) / 2;
-    strcpy(figura, "ROMBO");
+    figura = "ROMBO";
     return area;
 }
-float quadrato(float lato, char figura[20]) {
+float quadrato(float lato, string &figura) {
     float area;
     cout << "Lato: ";
     cin >> lato;
     area = lato * lato;
-    strcpy(figura, "QUADRATO");
+    figura = "QUADRATO";
     return area;
 }
 
-int stampa(float area, char figura[20]) {
+int stampa(float area, string &figura) {
     cout << "\nFigura: " << figura << endl;
     cout << "Area: " << area << endl;
     return 0;
@@ -51,7 +51,7 @@ int stampa(float area, char figura[20]) {
 
 int main() {
     float area = 0;
-    char figura[20];
+    string figura;
     int scelta;
     int s = 0;
 
@@ -82,6 +82,7 @@ int main() {
             break;
         case 5:
             cout << "uscita";
+            break;
         default:
             cout << "Scelta non valida!" << endl;
             return 1;
