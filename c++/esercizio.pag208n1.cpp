@@ -63,31 +63,33 @@ int main() {
     cout << "5 - Uscita\n";
     cout << "Scelta: ";
     cin >> scelta;
-   switch (scelta) {
-        case 1:
-            area = triangolo(0, 0, figura);
-            s = stampa(area, figura);
-            break;
-        case 2:
-            area = rettangolo(0, 0, figura);
-            s = stampa(area, figura);
-            break;
-        case 3:
-            area = rombo(0, 0, figura);
-            s = stampa(area, figura);
-            break;
-        case 4:
-            area = quadrato(0, figura);
-            s = stampa(area, figura);
-            break;
-        case 5:
-            cout << "uscita";
-            break;
-        default:
-            cout << "Scelta non valida!" << endl;
-            return 1;
-    }
+switch (scelta) {
+    case 1:
+        area = triangolo(0, 0, figura);
+        stampa(area, figura);
+        break;
 
-    stampa(area, figura);
+    case 2:
+        area = rettangolo(0, 0, figura);
+        stampa(area, figura);
+        break;
+
+    case 3:
+        area = rombo(0, 0, figura);
+        stampa(area, figura);
+        break;
+
+    case 4:
+        area = quadrato(0, figura);
+        stampa(area, figura);
+        break;
+
+    case 5:
+        cout << "\nUscita dal programma.\n";
+        break;
+
+    default:
+        cout << "\nScelta non valida!\n";
+}
     return 0;
 }
